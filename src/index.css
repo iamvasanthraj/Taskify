@@ -1,0 +1,19 @@
+.main-container {
+      border: 1px solid black;
+      width: 800px;
+      background-color: #00ffff;
+      margin: 0 auto;
+}
+
+h1{
+      text-align: center;
+      
+}
+p{
+      text-align: center;
+}
+
+form{
+      text-align: center;
+      font-size: 30px;
+}
