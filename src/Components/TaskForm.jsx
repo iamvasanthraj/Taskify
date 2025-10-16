@@ -1,23 +1,47 @@
-export default function TaskForm() {
-  return (
-    <form>
-      <div>
-        <input type="text" placeholder="Enter the Taks" />
-        <button onClick="submit">Add Task</button>
-      </div>
-      <div>
-        <select name="" id="">
-          <option value="high">High</option>
-          <option value="medium">Medium</option>
-          <option value="low">Low</option>
-        </select>
+import { useState } from "react";
 
-        <select name="" id="">
-          <option value="general">General</option>
-          <option value="work">Work</option>
-          <option value="personal">Personal</option>
-        </select>
+export default function TaskForm({ addTask }) {
+  const [task, setTask] = useState("");
+  const [priority, setPriority] = useState("medium");
+  const [catogory, setCategory] = useState("general");
+
+  const handlesumbit = (e) => {
+    e.preventDefault();
+    addTask({ text: task, priority, catogory, completed: false });
+
+    setTask("");
+    setPriority("medium");
+    setCategory("general");
+  };
+
+  return (
+    <form onSubmit={handlesumbit}>
+      <input
+        value={task}
+        type="text"
+        placeholder="Enter the Task"
+        onChange={(e) => setTask(e.target.value)}
+      />
+
+      <select value={priority} onChange={(e) => setPriority(e.target.value)}>
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+
+      <select value={catogory} onChange={(e) => setCategory(e.target.value)}>
+        <option value="general">General</option>
+        <option value="work">Work</option>
+        <option value="personal">Personal</option>
+      </select>
+
+      <div>
+        <button type="submit">Add Task</button>
       </div>
+
+      <h2>
+        {task} {priority} {catogory}
+      </h2>
     </form>
   );
 }
