@@ -24,15 +24,21 @@ export default function App() {
     setTasks(tasks.filter((_, i) => i != index));
   };
 
-  const clearTask = () =>{setTasks([])};
-
+  const clearTask = () => {
+    setTasks([]);
+  };
 
   return (
     <div className="main-container">
       <h1>TASKIFY</h1>
       <p> Organize and track tasks effortlessly </p>
       <TaskForm addTask={addTask} />
-      <TaskList tasks={tasks} updateTask={updateTask} deleteTask={deleteTask} clearTask={clearTask}/>
+      <TaskList
+        tasks={tasks}
+        updateTask={updateTask}
+        deleteTask={deleteTask}
+        clearTask={clearTask}
+      />
       <Progress tasks={tasks} />
     </div>
   );

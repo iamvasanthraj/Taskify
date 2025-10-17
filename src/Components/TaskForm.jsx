@@ -2,16 +2,22 @@ import { useState } from "react";
 
 export default function TaskForm({ addTask }) {
   const [task, setTask] = useState("");
-  const [priority, setPriority] = useState("medium");
-  const [catogory, setCategory] = useState("general");
+  const [priority, setPriority] = useState("Medium");
+  const [catogory, setCategory] = useState("General");
 
   const handlesumbit = (e) => {
     e.preventDefault();
+
+    if (task.trim() === "") {
+      alert("Task cannot be empty!");
+      return;
+    }
+    
     addTask({ text: task, priority, catogory, completed: false });
 
     setTask("");
-    setPriority("medium");
-    setCategory("general");
+    setPriority("Medium");
+    setCategory("General");
   };
 
   return (
@@ -24,15 +30,15 @@ export default function TaskForm({ addTask }) {
       />
 
       <select value={priority} onChange={(e) => setPriority(e.target.value)}>
-        <option value="high">High</option>
-        <option value="medium">Medium</option>
-        <option value="low">Low</option>
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
       </select>
 
       <select value={catogory} onChange={(e) => setCategory(e.target.value)}>
-        <option value="general">General</option>
-        <option value="work">Work</option>
-        <option value="personal">Personal</option>
+        <option value="General">General</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
       </select>
 
       <div>
