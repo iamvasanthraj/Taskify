@@ -19,7 +19,7 @@ A **minimal and interactive Task Management App** built with **ReactJS**. Keep t
 
 ## 💻 Live Demo
 
-[View Demo on GitHub Pages](https://your-username.github.io/react-task-app)
+[View Demo on GitHub Pages](https://iamvasanthraj.github.io/Taskify/)
 
 ---
 
