@@ -38,10 +38,6 @@ export default function TaskForm({ addTask }) {
       <div>
         <button type="submit">Add Task</button>
       </div>
-
-      <h2>
-        {task} {priority} {catogory}
-      </h2>
     </form>
   );
 }
