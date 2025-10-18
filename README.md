@@ -17,11 +17,14 @@ A **minimal and interactive Task Management App** built with **ReactJS**. Keep t
 
 ---
 
+<<<<<<< HEAD
 ## 💻 Live Demo
 
 [View Demo on GitHub Pages](https://iamvasanthraj.github.io/Taskify/)
 
 ---
+=======
+>>>>>>> 71e3001 (Deploy)
 
 ## ⚡ Tech Stack
 
@@ -30,3 +33,8 @@ A **minimal and interactive Task Management App** built with **ReactJS**. Keep t
 
 ---
 
+## 💻 Live Demo
+
+[View Demo on GitHub Pages](https://your-username.github.io/react-task-app)
+
+---
